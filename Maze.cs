@@ -8,6 +8,14 @@ namespace MazeGame_Ex5
 {
     internal class Maze
     {
+        // Player items
+        Item key;
+
+        //Room items;
+        Item coin;
+        Item book;
+        Item lamp;
+
         Room kitchen;
         Room livingRoom;
         Room exit;
@@ -21,12 +29,25 @@ namespace MazeGame_Ex5
         Room losingRoom;
    
         public Maze() {
+
+            // Room items
+            this.coin = new Item("Coin", true);
+            this.book = new Item("Book", true);
+            this.lamp = new Item("Lamo", false);
+
+
             this.kitchen = new Room("Kitchen");
             this.livingRoom = new Room("Living Room");
             this.exit = new Room("Exit");
             this.bathroom = new Room("Bathroom");
             this.bedroom = new Room("Bedroom");
             this.tortureChamber = new Room("Torture Chamber");
+
+            // Set Room Items
+            this.bathroom.addItem(this.coin);
+            this.bathroom.addItem(this.book);
+            this.livingRoom.addItem(this.lamp);
+
 
             this.setSpecialRooms();
             this.setRoomConnections();
@@ -49,6 +70,7 @@ namespace MazeGame_Ex5
             this.startRoom = this.bathroom;
         }
 
+
         public Room getStartRoom()
         {
             return this.startRoom;
@@ -63,5 +85,6 @@ namespace MazeGame_Ex5
         {
             return this.losingRoom;
         }
+
     }
 }

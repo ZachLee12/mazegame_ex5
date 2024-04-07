@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|solutionrelative:mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|c:\\users\\lenovo\\desktop\\htwg konstanz\\oop_with_c#\\mazegame_ex5\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|solutionrelative:mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|c:\\users\\lenovo\\desktop\\htwg konstanz\\oop_with_c#\\mazegame_ex5\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|c:\\users\\lenovo\\desktop\\htwg konstanz\\oop_with_c#\\mazegame_ex5\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|solutionrelative:item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\maze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|solutionrelative:maze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B44FEBB-47BC-4AD0-829C-DD4E780CDBE1}|MazeGame_Ex5.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,19 +30,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\Room.cs",
               "RelativeDocumentMoniker": "Room.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\Room.cs",
               "RelativeToolTip": "Room.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAIwB8AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-07T11:09:23.967Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\Item.cs",
+              "RelativeDocumentMoniker": "Item.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\Item.cs",
+              "RelativeToolTip": "Item.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T12:03:51.45Z",
               "EditorCaption": ""
             },
             {
@@ -53,7 +67,7 @@
               "RelativeDocumentMoniker": "Maze.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\Maze.cs",
               "RelativeToolTip": "Maze.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwDAAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-07T11:09:18.534Z",
               "EditorCaption": ""
@@ -66,7 +80,7 @@
               "RelativeDocumentMoniker": "MainWindow.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\MainWindow.cs",
               "RelativeToolTip": "MainWindow.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA0wBMAAAAeAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAwwBsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-07T11:04:06.671Z",
               "EditorCaption": ""
@@ -74,26 +88,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\MainWindow.cs",
-              "RelativeDocumentMoniker": "MainWindow.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\MainWindow.cs [Design]",
-              "RelativeToolTip": "MainWindow.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T11:00:27.12Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\HTWG KONSTANZ\\OOP_with_C#\\MazeGame_Ex5\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAKAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwDEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T11:09:06.654Z"
+              "WhenOpened": "2024-04-07T11:09:06.654Z",
+              "EditorCaption": ""
             }
           ]
         }

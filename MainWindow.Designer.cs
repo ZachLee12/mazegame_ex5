@@ -36,6 +36,13 @@
             this.buttonW = new System.Windows.Forms.Button();
             this.buttonE = new System.Windows.Forms.Button();
             this.buttonS = new System.Windows.Forms.Button();
+            this.youHaveLabel = new System.Windows.Forms.Label();
+            this.playerItemsListBox = new System.Windows.Forms.ListBox();
+            this.roomContainsLabel = new System.Windows.Forms.Label();
+            this.roomItemsListBox = new System.Windows.Forms.ListBox();
+            this.buttonDrop = new System.Windows.Forms.Button();
+            this.pickUpButton = new System.Windows.Forms.Button();
+            this.buttonUse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // missionLabel
@@ -118,11 +125,81 @@
             this.buttonS.UseVisualStyleBackColor = true;
             this.buttonS.Click += new System.EventHandler(this.buttonS_Click);
             // 
+            // youHaveLabel
+            // 
+            this.youHaveLabel.AutoSize = true;
+            this.youHaveLabel.Location = new System.Drawing.Point(42, 455);
+            this.youHaveLabel.Name = "youHaveLabel";
+            this.youHaveLabel.Size = new System.Drawing.Size(101, 25);
+            this.youHaveLabel.TabIndex = 8;
+            this.youHaveLabel.Text = "You have:";
+            // 
+            // playerItemsListBox
+            // 
+            this.playerItemsListBox.FormattingEnabled = true;
+            this.playerItemsListBox.ItemHeight = 24;
+            this.playerItemsListBox.Location = new System.Drawing.Point(47, 489);
+            this.playerItemsListBox.Name = "playerItemsListBox";
+            this.playerItemsListBox.Size = new System.Drawing.Size(267, 148);
+            this.playerItemsListBox.TabIndex = 9;
+            // 
+            // roomContainsLabel
+            // 
+            this.roomContainsLabel.AutoSize = true;
+            this.roomContainsLabel.Location = new System.Drawing.Point(473, 455);
+            this.roomContainsLabel.Name = "roomContainsLabel";
+            this.roomContainsLabel.Size = new System.Drawing.Size(180, 25);
+            this.roomContainsLabel.TabIndex = 10;
+            this.roomContainsLabel.Text = "The room contains:";
+            // 
+            // roomItemsListBox
+            // 
+            this.roomItemsListBox.FormattingEnabled = true;
+            this.roomItemsListBox.ItemHeight = 24;
+            this.roomItemsListBox.Location = new System.Drawing.Point(478, 489);
+            this.roomItemsListBox.Name = "roomItemsListBox";
+            this.roomItemsListBox.Size = new System.Drawing.Size(267, 148);
+            this.roomItemsListBox.TabIndex = 11;
+            // 
+            // buttonDrop
+            // 
+            this.buttonDrop.Location = new System.Drawing.Point(330, 508);
+            this.buttonDrop.Name = "buttonDrop";
+            this.buttonDrop.Size = new System.Drawing.Size(131, 36);
+            this.buttonDrop.TabIndex = 12;
+            this.buttonDrop.Text = "Drop >";
+            this.buttonDrop.UseVisualStyleBackColor = true;
+            // 
+            // pickUpButton
+            // 
+            this.pickUpButton.Location = new System.Drawing.Point(330, 576);
+            this.pickUpButton.Name = "pickUpButton";
+            this.pickUpButton.Size = new System.Drawing.Size(131, 43);
+            this.pickUpButton.TabIndex = 13;
+            this.pickUpButton.Text = "< Pick up";
+            this.pickUpButton.UseVisualStyleBackColor = true;
+            // 
+            // buttonUse
+            // 
+            this.buttonUse.Location = new System.Drawing.Point(112, 661);
+            this.buttonUse.Name = "buttonUse";
+            this.buttonUse.Size = new System.Drawing.Size(131, 36);
+            this.buttonUse.TabIndex = 14;
+            this.buttonUse.Text = "Use";
+            this.buttonUse.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 709);
+            this.Controls.Add(this.buttonUse);
+            this.Controls.Add(this.pickUpButton);
+            this.Controls.Add(this.buttonDrop);
+            this.Controls.Add(this.roomItemsListBox);
+            this.Controls.Add(this.roomContainsLabel);
+            this.Controls.Add(this.playerItemsListBox);
+            this.Controls.Add(this.youHaveLabel);
             this.Controls.Add(this.buttonS);
             this.Controls.Add(this.buttonE);
             this.Controls.Add(this.buttonW);
@@ -148,6 +225,13 @@
         private System.Windows.Forms.Button buttonW;
         private System.Windows.Forms.Button buttonE;
         private System.Windows.Forms.Button buttonS;
+        private System.Windows.Forms.Label youHaveLabel;
+        private System.Windows.Forms.ListBox playerItemsListBox;
+        private System.Windows.Forms.Label roomContainsLabel;
+        private System.Windows.Forms.ListBox roomItemsListBox;
+        private System.Windows.Forms.Button buttonDrop;
+        private System.Windows.Forms.Button pickUpButton;
+        private System.Windows.Forms.Button buttonUse;
     }
 }
 

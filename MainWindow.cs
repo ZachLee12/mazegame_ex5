@@ -20,11 +20,25 @@ namespace MazeGame_Ex5
             this.maze = new Maze();
             this.player = new Player(maze.getStartRoom());
             this.updateRoom();
+
+            // Update Player Items
+            for (int i = 0; i < this.player.getBag().Count; i++)
+            {
+                this.playerItemsListBox.Items.Add(this.player.getBag()[i]);
+            }
         }
 
         private void updateRoom()
         {
-            this.roomLabel.Text = this.player.getCurrentRoom().getName();
+            Room currentRoom = this.player.getCurrentRoom();
+            this.roomLabel.Text = currentRoom.getName();
+            
+            // Update Room Items
+            this.roomItemsListBox.Items.Clear();
+            for(int i = 0;i < currentRoom.getContent().Count; i++)
+            {
+                this.roomItemsListBox.Items.Add(currentRoom.getContent()[i]);
+            }
         }
 
         private void movePlayer(char direction)

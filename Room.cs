@@ -8,14 +8,16 @@ namespace MazeGame_Ex5
 {
     internal class Room
     {
-        public string name;
-        public Dictionary<char, Room?> connectingRoomsDict;
+        private string name;
+        private Dictionary<char, Room?> connectingRoomsDict;
+        private List<Item> content;
         
 
         public Room(string name)
         {
             this.name = name;
             this.connectingRoomsDict = new Dictionary<char, Room>();
+            this.content = new List<Item>();
         }
 
         public void print()
@@ -24,6 +26,20 @@ namespace MazeGame_Ex5
         }
 
         public string getName() {  return name; }
+
+        public List<Item> getContent()
+        {
+            return this.content;
+        }
+        public void addItem(Item item)
+        {
+            this.content.Add(item);
+        }
+
+        public void removeItem(Item item)
+        {
+            this.content.Remove(item);
+        }
 
         public void setConnectedRooms(
             Room? north,
