@@ -41,6 +41,12 @@ namespace MazeGame_Ex5
             this.content.Remove(item);
         }
 
+        public void setOneConnectedRoom(Room? connectingRoom, char direction)
+        {
+            this.connectingRoomsDict.Remove(direction);
+            this.connectingRoomsDict[direction] = connectingRoom;
+        }
+
         public void setConnectedRooms(
             Room? north,
             Room? east,

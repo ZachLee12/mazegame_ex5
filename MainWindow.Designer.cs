@@ -169,6 +169,7 @@
             this.buttonDrop.TabIndex = 12;
             this.buttonDrop.Text = "Drop >";
             this.buttonDrop.UseVisualStyleBackColor = true;
+            this.buttonDrop.Click += new System.EventHandler(this.buttonDrop_Click);
             // 
             // pickUpButton
             // 
@@ -178,6 +179,7 @@
             this.pickUpButton.TabIndex = 13;
             this.pickUpButton.Text = "< Pick up";
             this.pickUpButton.UseVisualStyleBackColor = true;
+            this.pickUpButton.Click += new System.EventHandler(this.pickUpButton_Click);
             // 
             // buttonUse
             // 
@@ -187,6 +189,7 @@
             this.buttonUse.TabIndex = 14;
             this.buttonUse.Text = "Use";
             this.buttonUse.UseVisualStyleBackColor = true;
+            this.buttonUse.Click += new System.EventHandler(this.buttonUse_Click);
             // 
             // MainWindow
             // 

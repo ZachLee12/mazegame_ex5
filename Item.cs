@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MazeGame_Ex5
 {
     internal class Item
     {
-        private string name;
+        protected string name;
         private bool pickable;
         public Item(string name, bool pickable)
         {
@@ -26,9 +27,9 @@ namespace MazeGame_Ex5
             return this.pickable;
         }
 
-        public void use(Player user)
+        public virtual void use(Player user)
         {
-            // in exercise 7
+           
         }
     }
 }
