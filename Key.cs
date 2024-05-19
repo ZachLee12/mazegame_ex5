@@ -15,6 +15,11 @@ namespace MazeGame_Ex5
             this.targetDoor = targetDoor;
         }
 
+        public override string ToString()
+        {
+            return this.name;
+        }
+
         public override void use(Player user)
         {
             Room targetRoom = user.getCurrentRoom();

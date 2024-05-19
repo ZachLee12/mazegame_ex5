@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MazeGame_Ex5
 {
@@ -16,7 +17,7 @@ namespace MazeGame_Ex5
 
         public override void use(Player user)
         {
-            WoodenStick anotherStick = new WoodenStick("WoodenStick", true);
+            WoodenStick anotherStick = new WoodenStick("Wooden Stick", true);
             user.addItem(anotherStick);
         }
     }

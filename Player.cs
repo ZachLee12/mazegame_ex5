@@ -10,15 +10,11 @@ namespace MazeGame_Ex5
     {
         private Room currentRoom;
         private List<Item> bag;
-        private Item key;
+        private Key key;
         public Player(Room currentRoom)
         {
             this.bag = new List<Item>();
             this.currentRoom = currentRoom;
-
-            // Player items
-            this.key = new Item("Key", true);
-            this.addItem(this.key);
 
         }
 
@@ -32,6 +28,7 @@ namespace MazeGame_Ex5
             Room moveToRoom = this.currentRoom.getConnectedRoom(direction);
             if (moveToRoom == null)
             {
+                Console.WriteLine("null Room");
                 return false;
             }
             else
@@ -47,6 +44,7 @@ namespace MazeGame_Ex5
         }
         public void addItem(Item item)
         {
+            Console.WriteLine($"Added {item.ToString()} to inventory");
             this.bag.Add(item);
         }
 

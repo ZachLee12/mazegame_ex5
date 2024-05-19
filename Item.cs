@@ -29,7 +29,7 @@ namespace MazeGame_Ex5
 
         public virtual void use(Player user)
         {
-           
+            Console.WriteLine("Use method in Item Class");
         }
     }
 }

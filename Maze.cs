@@ -9,16 +9,21 @@ namespace MazeGame_Ex5
     internal class Maze
     {
 
-        //Door
-        Door door;
+        //Doors
+        Door redDoor;
+        Door blueDoor;
 
-        //Key
-        Key key;
+        //Keys
+        Key redKey;
+        Key blueKey;
 
         //Room items;
         Item coin;
         Item book;
         Item rock;
+
+        //Usable items;
+        WoodenStick woodenStick;
 
         Room kitchen;
         Room livingRoom;
@@ -38,6 +43,7 @@ namespace MazeGame_Ex5
             this.coin = new Item("Coin", true);
             this.book = new Item("Book", true);
             this.rock = new Item("Rock", false);
+            this.woodenStick = new WoodenStick("Wooden Stick", true);
 
 
             this.kitchen = new Room("Kitchen");
@@ -50,17 +56,30 @@ namespace MazeGame_Ex5
             // Set Room Items
             this.bathroom.addItem(this.coin);
             this.bathroom.addItem(this.book);
+            this.bathroom.addItem(this.woodenStick);
             this.livingRoom.addItem(this.rock);
 
             // Set Rooms
             this.setSpecialRooms();
             this.setRoomConnections();
 
-            // Door
-            this.door = new Door("Door", false, true, this.livingRoom, this.exit, 'E', 'W');
-            this.livingRoom.addItem(this.door);
-            this.exit.addItem(this.door);
+            // Red Door
+            this.redDoor = new Door("Red Door", false, true, this.bedroom, this.livingRoom, 'N', 'S');
+            this.bedroom.addItem(this.redDoor);
+            this.livingRoom.addItem(this.redDoor);
 
+            // Red Key
+            this.redKey = new Key("Red Key", true, this.redDoor);
+            this.bathroom.addItem(this.redKey);
+
+            // Blue Door
+            this.blueDoor = new Door("Blue Door", false, true, this.bathroom, this.bedroom, 'E', 'W');
+            this.bathroom.addItem(this.blueDoor);
+            this.bedroom.addItem(this.blueDoor);
+
+            // Blue Key
+            this.blueKey = new Key("Blue Key", true, this.blueDoor);
+            this.bathroom.addItem(this.blueKey);
         }
 
         private void setRoomConnections()

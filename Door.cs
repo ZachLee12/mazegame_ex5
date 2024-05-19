@@ -13,6 +13,8 @@ namespace MazeGame_Ex5
         private Room room2;
         private char direction1;
         private char direction2;
+
+        private string saveOriginalName;
         public Door(
             string name,
             bool pickable,
@@ -26,10 +28,18 @@ namespace MazeGame_Ex5
             this.locked = locked;
             this.room1 = room1;
             this.room2 = room2;
+            this.direction1 = direction1;
+            this.direction2 = direction2;
+            this.saveOriginalName = this.name;
 
-            // Connect the rooms to each other via this Door
-            this.room1.setOneConnectedRoom(room2, direction1);
-            this.room2.setOneConnectedRoom(room1, direction2);
+            // Lock the rooms to each other via this Door
+            this.lockDoor();
+            this.updateName();
+        }
+
+        public void updateName()
+        {   
+            this.name = this.locked ? $"Locked {this.saveOriginalName}" : $"Opened {this.saveOriginalName}";
         }
 
         public bool isLocked()
@@ -47,22 +57,31 @@ namespace MazeGame_Ex5
             return this.room2;
         }
 
+        public void lockDoor()
+        {
+            this.room1.setOneConnectedRoom(null, this.direction1);
+            this.room2.setOneConnectedRoom(null, this.direction2);
+        }
+
+        public void unlockDoor()
+        {
+            this.room1.setOneConnectedRoom(this.room2, this.direction1);
+            this.room2.setOneConnectedRoom(this.room1, this.direction2);
+        }
+
         public void toggleLock()
         {
-            this.locked = !this.locked;
-
             if(this.locked)
             {
-                this.name = "Locked" + this.name;
-                this.room1.setOneConnectedRoom(null,direction1);
-                this.room2.setOneConnectedRoom(null, direction2);
+                this.unlockDoor();
             }
             else
             {
-                this.name = "Open" + this.name;
-                this.room1.setOneConnectedRoom(this.room2, direction1);
-                this.room2.setOneConnectedRoom(this.room1, direction2);
+                this.lockDoor();
             }
+            this.locked = !this.locked;
+
+            this.updateName();
         }
     }
 }

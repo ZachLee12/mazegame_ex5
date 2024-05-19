@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,12 +15,36 @@ namespace MazeGame_Ex5
     {
         private Maze maze; 
         private Player player;
+
+        // Stopwatch for highscore counter
+        private Stopwatch stopwatch;
         public MainWindow()
         {
             InitializeComponent();
             this.maze = new Maze();
             this.player = new Player(maze.getStartRoom());
             this.updateRoom();
+
+
+            // Stopwatch for highscore counter
+            stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            // Handle the FormClosing event to stop the Stopwatch and log the time
+            this.FormClosing += MainForm_FormClosing;
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Stop the Stopwatch when the form is closing
+            stopwatch.Stop();
+
+            // Log the elapsed time
+            TimeSpan elapsed = stopwatch.Elapsed;
+            string formatElapsedString = $"Elapsed time: {elapsed.TotalSeconds} seconds";
+
+            // You can log to a file, console, or any other logging mechanism
+            Console.WriteLine(formatElapsedString);
         }
 
         private void updateRoom()
@@ -120,7 +145,7 @@ namespace MazeGame_Ex5
         {
             Room currentRoom = this.player.getCurrentRoom();
             Door targetDoor = null;
-            bool canGoThrough = false;
+            bool canGoThrough = true;
             foreach(Item item in this.player.getCurrentRoom().getContent())
             {
                 if(item is Door door)
@@ -129,21 +154,6 @@ namespace MazeGame_Ex5
                 }
             }
 
-            if(targetDoor != null)
-            {
-                // If the room that the player wants to move to has a door connected
-                if (currentRoom.getConnectedRoom(direction).getContent().Contains(targetDoor))
-                {
-                    if (!targetDoor.isLocked())
-                    {
-                        canGoThrough = true;
-                    }
-                }
-            }
-            else
-            {
-                canGoThrough = true;
-            }
             return canGoThrough;
         }
 
@@ -213,7 +223,7 @@ namespace MazeGame_Ex5
                 MessageBox.Show("Select an item from your bag to use it!");
                 return;
             }
-
+            targetItem.use(this.player);
             this.updateRoom();
         }
     }
