@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,9 +37,8 @@ namespace MazeGame_Ex5
         Room startRoom;
         Room winningRoom;
         Room losingRoom;
-   
-        public Maze() {
 
+        public Maze() {
             // Room items
             this.coin = new Item("Coin", true);
             this.book = new Item("Book", true);

@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,9 @@ namespace MazeGame_Ex5
         private Maze maze; 
         private Player player;
 
+        // For highscore feature
+        private HighScoreService highScoreService;
+
         // Stopwatch for highscore counter
         private Stopwatch stopwatch;
         public MainWindow()
@@ -25,16 +29,35 @@ namespace MazeGame_Ex5
             this.player = new Player(maze.getStartRoom());
             this.updateRoom();
 
+            // For highscore feature
+            this.highScoreService = new HighScoreService();
 
             // Stopwatch for highscore counter
             stopwatch = new Stopwatch();
             stopwatch.Start();
 
+            // Subscribe to the Load event
+            this.Load += new EventHandler(MainForm_Load);
+
             // Handle the FormClosing event to stop the Stopwatch and log the time
             this.FormClosing += MainForm_FormClosing;
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        private async Task<string> getHighScore()
+        {
+            // For highscore feature
+            string currentHighScore = await this.highScoreService.getHighScore("http://localhost:3000/highscore");
+            this.actualHighScore.Text = currentHighScore;
+            return currentHighScore;
+        }
+
+        // Event handler for the Load event
+        private async void MainForm_Load(object sender, EventArgs e)
+        {
+            await this.getHighScore();
+        }
+
+        private async void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Stop the Stopwatch when the form is closing
             stopwatch.Stop();
@@ -43,8 +66,13 @@ namespace MazeGame_Ex5
             TimeSpan elapsed = stopwatch.Elapsed;
             string formatElapsedString = $"Elapsed time: {elapsed.TotalSeconds} seconds";
 
-            // You can log to a file, console, or any other logging mechanism
+            await this.updateHighScore(elapsed);
             Console.WriteLine(formatElapsedString);
+        }
+
+        private async Task<string> updateHighScore(TimeSpan elapsed)
+        {
+            return await this.highScoreService.updateHighScore("http://localhost:3000/highscore", elapsed.TotalSeconds);
         }
 
         private void updateRoom()
@@ -225,6 +253,11 @@ namespace MazeGame_Ex5
             }
             targetItem.use(this.player);
             this.updateRoom();
+        }
+
+        private void highScoreLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

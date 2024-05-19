@@ -43,6 +43,8 @@
             this.buttonDrop = new System.Windows.Forms.Button();
             this.pickUpButton = new System.Windows.Forms.Button();
             this.buttonUse = new System.Windows.Forms.Button();
+            this.highScoreLabel = new System.Windows.Forms.Label();
+            this.actualHighScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // missionLabel
@@ -191,11 +193,32 @@
             this.buttonUse.UseVisualStyleBackColor = true;
             this.buttonUse.Click += new System.EventHandler(this.buttonUse_Click);
             // 
+            // highScoreLabel
+            // 
+            this.highScoreLabel.AutoSize = true;
+            this.highScoreLabel.Location = new System.Drawing.Point(35, 138);
+            this.highScoreLabel.Name = "highScoreLabel";
+            this.highScoreLabel.Size = new System.Drawing.Size(142, 25);
+            this.highScoreLabel.TabIndex = 15;
+            this.highScoreLabel.Text = "HIGHSCORE: ";
+            this.highScoreLabel.Click += new System.EventHandler(this.highScoreLabel_Click);
+            // 
+            // actualHighScore
+            // 
+            this.actualHighScore.AutoSize = true;
+            this.actualHighScore.Location = new System.Drawing.Point(194, 138);
+            this.actualHighScore.Name = "actualHighScore";
+            this.actualHighScore.Size = new System.Drawing.Size(28, 25);
+            this.actualHighScore.TabIndex = 16;
+            this.actualHighScore.Text = "0 ";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 709);
+            this.Controls.Add(this.actualHighScore);
+            this.Controls.Add(this.highScoreLabel);
             this.Controls.Add(this.buttonUse);
             this.Controls.Add(this.pickUpButton);
             this.Controls.Add(this.buttonDrop);
@@ -235,6 +258,8 @@
         private System.Windows.Forms.Button buttonDrop;
         private System.Windows.Forms.Button pickUpButton;
         private System.Windows.Forms.Button buttonUse;
+        private System.Windows.Forms.Label highScoreLabel;
+        private System.Windows.Forms.Label actualHighScore;
     }
 }
 
